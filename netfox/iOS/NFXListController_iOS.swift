@@ -60,9 +60,9 @@ class NFXListController_iOS: NFXListController, UITableViewDelegate, UITableView
         self.searchController.searchBar.searchBarStyle = .minimal
         self.searchController.view.backgroundColor = UIColor.clear
         
+        self.definesPresentationContext = true
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = self.searchController
-            self.definesPresentationContext = true
         } else {
             let searchView = UIView()
             searchView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 60, height: 0)
